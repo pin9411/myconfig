@@ -10,6 +10,9 @@ return
 CapsLock::
 Send, {Backspace}
 return
+!CapsLock::
+Send, {Delete}
+return
 
 !w::
 Send, {Up}
