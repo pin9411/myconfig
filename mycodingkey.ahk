@@ -14,6 +14,17 @@ return
 Send, {Delete}
 return
 
+AppsKey::
+Send, {Enter}
+return
+
+^AppsKey::
+Send, {Ctrl Down}{Enter}{Ctrl Up}
+return
+^+AppsKey::
+Send, {Ctrl Down}{Shift Down}{Enter}{Ctrl Up}{Shift Up}
+return
+
 !w::
 Send, {Up}
 return
