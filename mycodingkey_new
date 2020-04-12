@@ -1,0 +1,64 @@
+
+CapsLock::Send, {BackSpace}
+Space & CapsLock::Send, {Delete}
+
+space::
+Send {space}
+return
+
+space & w::
+Send, {Up}
+return
+space & a::
+Send, {Left}
+return
+space & s::
+Send, {Down}
+return
+space & d::
+Send, {Right}
+return
+space & q::
+Send, ^{Left}
+return
+space & e::
+Send, ^{Right}
+return
+
+space & 9::
+Send, {{}
+return
+space & 0::
+Send, {}}
+return
+space & u::
+Send, {-}
+return
+space & i::
+Send, {=}
+return
+space & j::
+Send, {;}
+return
+space & k::
+Send, {'}
+return
+space & n::
+Send, {\}
+return
+space & m::
+Send, {/}
+return
+
+#If GetKeyState("Ctrl")
+space & q::Send, {Home}
+space & e:: Send, {End}
+space & 9::Send, {[}
+space & 0::Send, {]}
+space & u::Send, {_}
+space & i::Send, {+}
+space & j::Send, {:}
+space & k::Send, {"}
+space & n::Send, {|}
+space & m::Send, {?}
+return
