@@ -25,11 +25,6 @@ return
 Ctrl & AppsKey::
 Send, {Ctrl Down}{Enter}{Ctrl Up}
 return
-#If GetKeyState("Shift")
-Ctrl & AppsKey::
-Send, {Ctrl Down}{Shift Down}{Enter}{Shift Up}{Ctrl Up}
-return
-
 
 !w::
 Send, {Up}
@@ -119,4 +114,10 @@ return
 
 ^!m::
 Send, {|}
+return
+
+
+#If GetKeyState("Shift")
+Ctrl & AppsKey::
+Send, {Ctrl Down}{Shift Down}{Enter}{Shift Up}{Ctrl Up}
 return
