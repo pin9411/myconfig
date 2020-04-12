@@ -1,3 +1,8 @@
+`::
+Pause
+Suspend
+return
+
 Alt::
 KeyWait, Alt
 return
@@ -17,13 +22,14 @@ return
 AppsKey::
 Send, {Enter}
 return
-
-^AppsKey::
+Ctrl & AppsKey::
 Send, {Ctrl Down}{Enter}{Ctrl Up}
 return
-^+AppsKey::
-Send, {Ctrl Down}{Shift Down}{Enter}{Ctrl Up}{Shift Up}
+#If GetKeyState("Shift")
+Ctrl & AppsKey::
+Send, {Ctrl Down}{Shift Down}{Enter}{Shift Up}{Ctrl Up}
 return
+
 
 !w::
 Send, {Up}
@@ -38,10 +44,10 @@ return
 Send, {Right}
 return
 !q::
-Send, {Ctrl down}{Left}{Ctrl up}
+Send, ^{Left}
 return
 !e::
-Send, {Ctrl down}{Right}{Ctrl up}
+Send, ^{Right}
 return
 ^!q::
 Send, {Home}
@@ -104,7 +110,7 @@ Send, {/}
 return
 
 ^!n::
-Send, {|}
+Send, {?}
 return
 
 !m::
@@ -112,5 +118,5 @@ Send, {\}
 return
 
 ^!m::
-Send, {?}
+Send, {|}
 return
